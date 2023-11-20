@@ -10,6 +10,7 @@ body {
 .top-nav {
   background-color: #9A4444;
   height: 40px;
+  top: 0;
 }
 .top-nav ul {
   list-style: none;
@@ -37,7 +38,10 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
+  position: sticky;
   justify-content: space-around;
+  top: 0;
+  z-index: 9999;
 }
 .sticky-nav ul {
   list-style: none;
@@ -72,6 +76,14 @@ body {
 }
 .sticky-nav ul li a:hover div {
   background-color: #dba787;
+}
+
+.fixed-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px;
+  max-height: 60px;
 }
 
 .jumbotron {
@@ -129,7 +141,7 @@ body {
 
 .reviews {
   background-color: #9A4444;
-  max-height: 200px;
+  height: 170px;
 }
 .reviews ul {
   display: flex;
@@ -151,11 +163,11 @@ body {
 }
 
 article {
-  padding-top: 0.1px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 article .feature1 {
   position: relative;
@@ -171,7 +183,7 @@ article .feature1 .feature1Desc {
   height: 700px;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
-  z-index: 100000;
+  z-index: 1000;
   left: 50%;
   justify-items: center;
   align-items: center;
@@ -235,7 +247,7 @@ article .feature2 .feature2Desc {
   height: 700px;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
-  z-index: 100000;
+  z-index: 1000;
   justify-items: center;
   align-items: center;
   justify-content: space-around;
@@ -298,7 +310,7 @@ article .feature3 .feature3Desc {
   height: 700px;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
-  z-index: 100000;
+  z-index: 1000;
   left: 50%;
   justify-items: center;
   align-items: center;
@@ -349,6 +361,78 @@ article .feature3 .feature3Images img {
   width: 2000px;
 }
 
+.crossplatform {
+  width: 100%;
+  height: 700px;
+  background-image: url("../img/crossplay-bg-colored.png");
+  background-size: cover;
+  background-position: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.crossplatform .crossplatformdesc {
+  display: flex;
+  margin: 0;
+  gap: 0px;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.crossplatform .crossplatformdesc h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.crossplatform .crossplatformdesc h3 {
+  margin-top: -15px;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+.crossplatform .crossplatformdesc a {
+  color: yellow;
+}
+.crossplatform .crossplatformdesc img {
+  width: 550px;
+}
+
+.news {
+  background-image: url("../img/news-background1.png");
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news .newsdesc {
+  height: 100%;
+  width: 70%;
+}
+.news .newsdesc h1 {
+  font-size: 2.5rem;
+}
+.news .newsdesc h3 {
+  font-size: 1rem;
+}
+.news .newsdesc ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-inline-start: 0px;
+}
+.news .newsdesc ul li img {
+  width: 300px;
+  height: 200px;
+}
+.news .newsdesc ul li .newscontent {
+  max-width: 300px;
+}
 .imageTransition {
   opacity: 1;
   animation: fade 0.5s linear;

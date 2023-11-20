@@ -19,8 +19,6 @@ const feature2Image = document.querySelector(".feature2Img");
 const feature3Image = document.querySelector(".feature3Img");
 
 
-
-
 const feature1NextButton = document.querySelector(".feature1Next");
 const feature1PreviousButton = document.querySelector(".feature1Previous");
 
@@ -98,6 +96,15 @@ function modifyIndex(slideIndex, n){
         slideIndex = feature1Images.length-1;
     }
     return slideIndex;
-    
 }
 // console.log("HAHAHAH");
+window.addEventListener('scroll', function () {
+    // var stickyNav = document.getElementById('sticky-nav')
+    let stickyNav = document.querySelector('.sticky-nav')
+    if (window.scrollY >= 100) {
+        console.log("DASDA");
+        stickyNav.classList.add('fixed-sticky');
+    } else {
+        stickyNav.classList.remove('fixed-sticky');
+    }
+});
